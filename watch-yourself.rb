@@ -35,7 +35,7 @@ module WatchYourself
       stats = { :time => now, :sys => params['sys'], :dia => params['dia'], :pulse => params['pulse'] }
       $stderr.puts "[#{now}] IN: #{stats.inspect}"
       redis.zadd key('stats'), now, JSON.stringify(stats)
-      redirect '/stats.html'
+      redirect '/out.html'
     end
 
     get '/stats' do

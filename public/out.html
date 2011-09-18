@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<style>
+body { font-family: 'helvetica neue', helvetica, sans-serif }
+</style>
+
+<title>watch yourself</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>
+$(function() {
+  $.get('/stats', function(stats, textStatus) {
+    alert(textStatus + '\n' + stats)
+  })
+})
+</script>
+</html>
